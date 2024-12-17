@@ -3,9 +3,9 @@ Contributors: kapasias
 Tags: elementor, addons, elementor widget, image hover effects, hover effect
 Donate link: https://paypal.me/jasonbasedanimation?locale.x=en_GB
 Requires at least: 5.7.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 1.11.8
+Stable tag: 1.11.9
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -119,14 +119,19 @@ No. Elementor is a live frontend website builder,and we create plugin based on e
 
 == Changelog ==
 
+= 1.11.9 =
+* Compatibility : Wordpress 6.7
+* Compatibility : Elementor 3.26
+* Few minor bugfix and improvements
+
 = 1.11.8 =
 * Compatibility : Wordpress 6.6.2
-* Compatibility : Eleemntor 3.24
+* Compatibility : Elementor 3.24
 * Few minor bugfix and improvements
 
 = 1.11.7 =
 * Compatibility : Wordpress 6.6
-* Compatibility : Eleemntor 3.23
+* Compatibility : Elementor 3.23
 * Few minor bugfix and improvements
 
 = 1.11.6 =
