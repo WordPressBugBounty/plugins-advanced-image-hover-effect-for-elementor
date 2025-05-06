@@ -3,9 +3,7 @@ namespace Elementor;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Utils;
-use Elementor\Scheme_Color;
 use Elementor\Group_Control_Typography;
-use Elementor\Scheme_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Box_Shadow;
@@ -782,6 +780,17 @@ class Advanced_Image_Hover_Effect_Kap_Asias extends Widget_Base {
 			]
 		);
 		$this->add_responsive_control(
+			'button_icon_Inner_padding',
+			[
+				'label' => esc_html__( 'Icon Padding', 'aihee' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em', '%' ],			
+				'selectors' => [
+					'{{WRAPPER}} .aihee-main-wrapper .aihee-icons .aihee-icon i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_responsive_control(
 			'button_icon_margin',
 			[
 				'label' => esc_html__( 'Margin', 'aihee' ),
@@ -857,6 +866,9 @@ class Advanced_Image_Hover_Effect_Kap_Asias extends Widget_Base {
 				'name'      => 'button_icon_n_bg',
 				'types'     => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .aihee-main-wrapper .aihee-icons .aihee-icon',
+				'condition' => [
+					'buttonIconEffectH!' => 'yes',
+				]
 			]
 		);
 		$this->add_group_control(
@@ -893,6 +905,33 @@ class Advanced_Image_Hover_Effect_Kap_Asias extends Widget_Base {
 			]
 		);
 		$this->add_control(
+			'buttonIconEffectH',
+			[
+				'label'     => esc_html__( 'Hover Effect', 'aihee' ),
+				'type'      => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Enable', 'aihee' ),
+				'label_off'    => esc_html__( 'Disable', 'aihee' ),
+				'default' => 'no',
+			]
+		);
+		$this->add_control(
+			'buttonIconEffectPosH',
+			[
+				'label' => esc_html__( 'Position', 'aihee' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => '',
+				'options' => [
+					'' => esc_html__( 'Bottom', 'aihee' ),
+					'aihee-icons-he-top' => esc_html__( 'Top', 'aihee' ),
+					'aihee-icons-he-left' => esc_html__( 'Left', 'aihee' ),
+					'aihee-icons-he-right' => esc_html__( 'Right', 'aihee' ),
+				],
+				'condition' => [
+					'buttonIconEffectH' => 'yes',
+				]
+			]
+		);
+		$this->add_control(
 			'button_icon_h_color',
 			[
 				'label' => esc_html__( 'Color', 'aihee' ),
@@ -909,6 +948,20 @@ class Advanced_Image_Hover_Effect_Kap_Asias extends Widget_Base {
 				'name'      => 'button_icon_h_bg',
 				'types'     => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .aihee-main-wrapper .aihee-icons .aihee-icon:hover',
+				'condition' => [
+					'buttonIconEffectH!' => 'yes',
+				]
+			]
+		);
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			[
+				'name'      => 'buttonIconHEffectBg',
+				'types'     => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .aihee-main-wrapper .aihee-icons.aihee-icons-he .aihee-icon:hover:after',
+				'condition' => [
+					'buttonIconEffectH' => 'yes',
+				]
 			]
 		);
 		$this->add_group_control(
@@ -1688,7 +1741,8 @@ class Advanced_Image_Hover_Effect_Kap_Asias extends Widget_Base {
 		
 		/*button start*/
 		if(!empty($bit1) || !empty($bit2) || !empty($bit3)){
-			$final_button .='<div class="aihee-icons">';
+			$buttonIconEffectH = (isset($settings['buttonIconEffectH']) && $settings['buttonIconEffectH'] == 'yes') ? 'aihee-icons-he '.esc_attr($settings['buttonIconEffectPosH']) : '';
+			$final_button .='<div class="aihee-icons '.esc_attr($buttonIconEffectH).'">';
 				if(!empty($bit1)){
 					$final_button .='<a href="'.esc_url($bu1).'" class="aihee-icon aihee-icon-first">'.$bit1.'</a>';
 				}

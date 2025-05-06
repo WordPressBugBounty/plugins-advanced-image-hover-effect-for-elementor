@@ -5,7 +5,7 @@ Donate link: https://paypal.me/jasonbasedanimation?locale.x=en_GB
 Requires at least: 5.7.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 1.11.11
+Stable tag: 1.11.12
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -118,6 +118,13 @@ No. Elementor is a live frontend website builder,and we create plugin based on e
 
 
 == Changelog ==
+
+= 1.11.12 =
+* Add : Icon Padding Dynamic Option
+* Add : Hover Effect With Left, Right, Top and Bottom Position
+* Update : Icon Alignment CSS improvements
+* Update : wp_register_style improvements
+* Fix : Few minor bugfix and improvements
 
 = 1.11.11 =
 * Compatibility : Wordpress 6.8

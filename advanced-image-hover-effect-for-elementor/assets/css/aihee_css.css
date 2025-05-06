@@ -200,7 +200,7 @@
     justify-content: space-between;
 }
 .aihee-main-wrapper.layout-2 .aihee-heading-title {
-    float: left;
+    float:left;
     font-size: 15px;
     font-weight: 600;
     word-break: break-all;
@@ -1096,3 +1096,55 @@
 
 /*26 end*/
 /*21-70 end*/
+/*effect*/
+.aihee-icons .aihee-icon {
+    display: flex;
+}
+.aihee-icons.aihee-icons-he .aihee-icon {
+    position: relative;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+}
+.aihee-icons.aihee-icons-he .aihee-icon:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 100%;
+    left: 50%;
+    background: #ffffff;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition-duration: 1000ms;
+    transition-duration: 1000ms;
+    z-index: -1;
+}
+.aihee-icons.aihee-icons-he .aihee-icon:hover:after {
+    top: -50%;
+}
+.aihee-icons.aihee-icons-he.aihee-icons-he-top .aihee-icon:after {
+    top: auto;
+    bottom: 100%;
+}
+
+.aihee-icons.aihee-icons-he.aihee-icons-he-top .aihee-icon:hover:after {
+    top: auto;
+    bottom: -50%;
+}
+
+.aihee-icons.aihee-icons-he.aihee-icons-he-left .aihee-icon:after {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-150%) translateY(-50%);
+    transform: translateX(-150%) translateY(-50%);
+}
+.aihee-icons.aihee-icons-he.aihee-icons-he-right .aihee-icon:after {
+    right: -50%;
+    top: 50%;
+    -webkit-transform: translateX(150%) translateY(-50%);
+    transform: translateX(150%) translateY(-50%);
+}
+.aihee-icons.aihee-icons-he.aihee-icons-he-left .aihee-icon:hover:after,
+.aihee-icons.aihee-icons-he.aihee-icons-he-right .aihee-icon:hover:after {
+   transform: translateX(-50%) translateY(-50%);
+}
