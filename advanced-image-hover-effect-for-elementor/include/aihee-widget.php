@@ -36,6 +36,10 @@ class Advanced_Image_Hover_Effect_Kap_Asias extends Widget_Base {
 		return ['image hover','advanced image hover','image effect','infobox','infobanner','button','box','skin','tags','title','heading','servicebox','image','layout','creative','html','animation','builder','custom','loop','social'];
 	}
 	
+	public function has_widget_inner_wrapper(): bool {
+		return false;
+	}
+	
 	protected function register_controls() {
 		$this->start_controls_section(
 			'content_section',
