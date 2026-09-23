@@ -3,12 +3,12 @@
 * Plugin Name: Advanced Image Hover Effect for Elementor
 * Plugin URI: https://kapasias.com/advanced-image-hover-effect-for-elementor/
 * Description: Advanced Image Hover Effect for Elementor Page Builder is customized hover effects for your box layout.
-* Version: 1.11.25
+* Version: 2.0
 * Author: KAP ASIAs
 * Author URI: http://kapasias.com
 * Text Domain: aihee
-* Elementor tested up to: 4.2
-* Elementor Pro tested up to: 4.2
+* Elementor tested up to: 4.3
+* Elementor Pro tested up to: 4.3
 */
 
 // Prevent direct access to files
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 // Plugin version
-defined( 'AIHEE_VERSION' ) or define( 'AIHEE_VERSION', '1.11.25' );
+defined( 'AIHEE_VERSION' ) or define( 'AIHEE_VERSION', '2.0' );
 define('AIHEE_PATH', plugin_dir_path(__FILE__));
 define('AIHEE_URL', plugin_dir_url(__FILE__));
 
