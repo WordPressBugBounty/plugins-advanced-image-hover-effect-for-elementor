@@ -5,7 +5,7 @@ Donate link: https://paypal.me/jasonbasedanimation?locale.x=en_GB
 Requires at least: 5.7.0
 Tested up to: 7.1
 Requires PHP: 5.6
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -117,6 +117,9 @@ No. Elementor is a live frontend website builder,and we create plugin based on e
 
 
 == Changelog ==
+
+= 2.0.1 =
+* Compatibility : Wordpress 7.1.4
 
 = 2.0 =
 * Compatibility : Wordpress 7.1.2
